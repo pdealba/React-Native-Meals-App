@@ -6,7 +6,9 @@ import CategoryGridTile from "../components/CategoryGridTile";
 function CategoriesScreen(props) {
   function renderCategoryItems(itemData) {
     function onPressHandler() {
-      props.navigation.navigate("MealOverview");
+      props.navigation.navigate("MealOverview", {
+        categoryId: itemData.item.id,
+      });
     }
 
     return (
